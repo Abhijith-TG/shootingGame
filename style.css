@@ -1,0 +1,172 @@
+#playground{
+    width: 500px;
+    height: 500px;
+    background: #000;
+    padding: 5px;
+    position: relative;
+
+    
+
+}
+
+#player{
+    width: 40px;
+    height: 50px;
+    position: absolute;
+    /* transition: all  linear; */
+    bottom: 5px;
+    left: 50%;
+    animation: swap 1s infinite linear;
+    background-image: url('./assets/ship.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: all 0.1s linear;
+}
+#player:focus{
+    outline: none;
+}
+ 
+@keyframes bulletMove{
+    0%{
+        
+    }
+    100%{
+        top:0%
+    }
+
+}
+
+
+.bulletMove{
+    width: 5px;
+    height: 5px;
+    background-color: #fa0c0c;
+    position: absolute;
+    animation: bulletMove 0.5s linear;
+}
+
+#enemy{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    left:50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation:swapEmemy 1s infinite  ;
+}
+
+ 
+
+.bullet{
+    width: 5px;
+    height: 5px;
+    background-color: #fa0c;
+
+}
+
+.bombs{
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: rgba(255, 0, 0, 0.8);
+
+}
+#mark{
+
+    text-align: center;
+    margin: 0;
+    /* border-bottom:1px solid #fa0c0c; */
+    margin-bottom:5px;
+
+}
+
+.control-section{
+    background-color: #000;
+
+    margin-top: 10px;
+    width: 50dvw;
+    height: 200px;
+    color: rgb(10, 10, 10);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    gap:30px;
+
+}
+
+.control-section2{
+    background-color: #000;
+    margin-left: 50%;
+    margin-right: 50%;
+    margin-top: 10px;
+    width: 100%;
+    height: 200px;
+    color: rgb(10, 10, 10);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    gap:30px;
+
+}
+.control{
+    width: 100%;
+    display:flex ;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    gap:40px;
+}
+
+#w_key,#a_key,#s_key,#d_key{
+    background-color: bisque;
+    padding: 10px 30px;
+    text-align: center;
+    font-size: large;
+    font-weight: 400;
+    
+}
+
+
+
+@keyframes swap {
+  0%   { background-image: url('./assets/ship.png'); }
+  33%  { background-image: url('./assets/ship2.png'); }
+  66%  { background-image: url('./assets/ship3.png'); }
+}
+
+@keyframes swapEmemy {
+    0%   { background-image: url('./assets/enemy.png'); }
+  33%  { background-image: url('./assets/enemy2.png'); }
+  66%   { background-image: url('./assets/enemy.png'); }
+  100%  { background-image: url('./assets/enemy2.png'); }
+
+}
+
+@keyframes death {
+    0%   { background-image: url('./assets/death.png'); }
+  33%  { background-image: url('./assets/death2.png'); }
+  66%   { background-image: url('./assets/death3.png'); }
+  
+}
+
+.deathClass{
+    animation: death 0.5s linear;
+}
+
+
+.over{
+    width: 500px;
+    height: 500px;
+    background: #000;
+    padding: 10px;
+    top:0;
+    position: absolute;
+    display: none;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+}

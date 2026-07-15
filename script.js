@@ -5,6 +5,9 @@
     const d_key = document.getElementById("d_key")
     const w_key = document.getElementById("w_key")
     const high = document.getElementById("high");
+    const restartBtn = document.getElementById("restartBtn");
+    const over = document.querySelector(".over");
+
 
 
 
@@ -125,12 +128,11 @@
             highBool = true;
             
         }
-        highScore = localStorage.getItem('highscore')
         const marksDash = document.querySelector('#marks');
         marksDash.innerHTML = highBool ? `Highest Score: ${mark}` :mark;
-        high.innerHTML = `Past High Score: ${highScore} `
-        const over = document.querySelector(".over");
+        high.innerHTML = `Past High Score: ${highScore || 0} `
         over.style.display = "flex";
+        highScore = localStorage.getItem('highscore')
 
     }
 
@@ -270,6 +272,14 @@
 
 
 
+// Restart the game
+restartBtn.onclick=()=>{
+            over.style.display = "none";
+            resetPositionOfEnemy()
+            mark=0;
+    player.focus();
+
+}
 
 
 

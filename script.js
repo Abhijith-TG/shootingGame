@@ -72,8 +72,8 @@
 
 
 
-            let bombsY = enemyPos.top;
-            let bombsX = enemyPos.left;
+            let bombsY = enemyPos.top + 15;
+            let bombsX = enemyPos.left + 10;
 
 
 
@@ -157,7 +157,7 @@
         playground.appendChild(bullet);
 
         let bulletY = i - 20;
-        let bulletX = j + 8;
+        let bulletX = j + 16;
 
 
 
@@ -203,13 +203,33 @@
 
     player.focus();
 
-    player.addEventListener("keydown", (e) => {
-        if (e.key === 'w') moveUp();
-        if (e.key === 's') moveDown();
-        if (e.key === 'a') moverLeft();
-        if (e.key === 'd') moverRight();
-        if (e.key === ' ') Shoot();
-    });
+  
+
+
+
+    player.addEventListener('keydown',(e)=>{
+        if (e.key === 'a'){
+            LeftMove = true
+        }
+        if (e.key === 'd'){
+            rightMove = true
+        }
+    })
+    player.addEventListener('keyup',(e)=>{
+        if (e.key === 'a'){
+            LeftMove = false
+        }
+        if (e.key === 'd'){
+            rightMove = false
+        }
+    })
+
+
+    player.addEventListener('keypress',(e)=>{
+        if(e.key=== ' '){
+            Shoot()
+        }
+    })
 
     w_key.onclick=()=>{
         Shoot()

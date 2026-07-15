@@ -44,21 +44,11 @@
     };
     const enemy = document.getElementById('enemy');
     const resetPositionOfEnemy = () => {
+        
         enemy.style.left = Math.floor(Math.random() * 400) + 'px';
-        // enemy.style.b ckgroundColor = getRandomColor();
-
-        // enemyAI()
+       
     }
 
-
-    // const enemyAI = ()=>{
-    //         const playerPos = player.getBoundingClientRect;
-    //         enemy.style.left = playerPos.left;
-    //         enemy.style.right = playerPos.right;
-    //         // ememy.style.top = playerPos.left;
-    //         // ememy.left = playerPos.left;
-
-    // }
 
 
     const EnemyShoot = () => {
@@ -92,15 +82,15 @@
 
 
 
-                const bulletPos = bombs.getBoundingClientRect();
+                const bombPos = bombs.getBoundingClientRect();
                 if (player) {
                     const playerPos = player.getBoundingClientRect();
 
                     if (
-                        bulletPos.top <= playerPos.bottom &&
-                        bulletPos.bottom >= playerPos.top &&
-                        bulletPos.left <= playerPos.right &&
-                        bulletPos.right >= playerPos.left
+                        bombPos.top <= playerPos.bottom &&
+                        bombPos.bottom >= playerPos.top &&
+                        bombPos.left <= playerPos.right &&
+                        bombPos.right >= playerPos.left
                     ) {
                         markDashs = mark;
 
@@ -120,9 +110,7 @@
 
             requestAnimationFrame(moveBullet);
         }
-        setTimeout(()=>{
-
-        },1000)
+        
 
     }
 

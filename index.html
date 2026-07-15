@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body style="width:100%">
+<body>
     
     <div id="playground">
         <h1 id="mark" style=" color:white;" >0</h1>
@@ -21,27 +21,34 @@
 
 
     </div>
-    <div style="display: flex; justify-content: space-between; width: 100%;">
+    <div class=" flex mt-10 justify-around items-center w-full">
 
-        <div class="control-section" >
             
             
-            <div class="control">
-                <div id="a_key" >A</div>
-                <div id="d_key">S</div>
+            <div class="flex gap-5">
+                <div id="a_key"  >
+                    <div class="w-8 h-8 bg-green-500">
+
+                    </div>
+                </div>
+                <div id="d_key"><div class="w-8 h-8 bg-green-500">
+
+                    </div>
+                </div>
                 
             </div>
-        </div>
-        <div class="control-section" >
+        <div class="" >
             
-            <div class="control"></div>
-            <div id="w_key" >W</div>
-        </div>
+            <div id="w_key" >
+                <div class="w-8 h-8 bg-red-500">
+
+                    </div>
+            </div>
         
     </div>
 </div>
 
-    
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="script.js" ></script>
 </body>
 </html>

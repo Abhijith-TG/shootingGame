@@ -274,11 +274,7 @@
 
 // Restart the game
 restartBtn.onclick=()=>{
-            over.style.display = "none";
-            resetPositionOfEnemy()
-            mark=0;
-    player.focus();
-
+ window.location.reload();
 }
 
 
